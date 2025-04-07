@@ -23,6 +23,16 @@ persistence:
   size: 1Gi
   storageClass: ""
 
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
 nodeSelector: {}
 tolerations: []
 affinity: {}
