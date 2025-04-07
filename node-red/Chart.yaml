@@ -1,0 +1,6 @@
+apiVersion: v2
+name: node-red
+description: A Helm chart for deploying Node-RED
+type: application
+version: 0.1.0
+appVersion: "3.0.0" # Replace with the desired Node-RED version

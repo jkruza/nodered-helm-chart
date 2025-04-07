@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: nodered/node-red
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 1880
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 250m
+    memory: 128Mi
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClass: ""
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
