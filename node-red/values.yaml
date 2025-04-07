@@ -33,6 +33,10 @@ ingress:
           pathType: ImplementationSpecific
   tls: []
 
+tailscale:
+  enabled: false
+  hostname: ""
+
 nodeSelector: {}
 tolerations: []
 affinity: {}

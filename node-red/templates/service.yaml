@@ -4,6 +4,13 @@ metadata:
   name: {{ .Release.Name }}-node-red
   labels:
     app: {{ .Chart.Name }}
+  annotations:
+    {{- if .Values.tailscale.enabled }}
+    tailscale.com/expose: "true"
+    {{- if .Values.tailscale.hostname }}
+    tailscale.com/hostname: "{{ .Values.tailscale.hostname }}"
+    {{- end }}
+    {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
