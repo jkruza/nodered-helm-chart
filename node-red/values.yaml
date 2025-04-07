@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: nodered/node-red
-  tag: alpine
+  tag: 3.1
   pullPolicy: IfNotPresent
 
 service:
